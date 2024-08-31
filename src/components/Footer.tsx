@@ -6,6 +6,7 @@ import XIcon from "./ui/icons/XIcon";
 import FacebookIcon from "./ui/icons/FacebookIcon";
 import InstagramIcon from "./ui/icons/InstagramIcon";
 import PhoneIcon from "./ui/icons/PhoneIcon";
+import { WHATSAPP_URL } from "@/constants";
 
 export default function Footer() {
   return (
@@ -20,19 +21,27 @@ export default function Footer() {
             latest updates on our product
           </p>
           <div className='mt-5 flex items-center gap-7'>
-            <Link target='_blank' href={"/"} className='footer-icon'>
+            <Link target='_blank' href={WHATSAPP_URL} className='footer-icon'>
               <WhatsappIcon />
             </Link>
-            <Link target='_blank' href={"/"} className='footer-icon'>
+            {/* <Link target='_blank' href={"/"} className='footer-icon'>
               <XIcon />
-            </Link>
-            <Link target='_blank' href={"/"} className='footer-icon'>
+            </Link> */}
+            {/* <Link target='_blank' href={"/"} className='footer-icon'>
               <FacebookIcon />
-            </Link>
-            <Link target='_blank' href={"/"} className='footer-icon'>
+            </Link> */}
+            <Link
+              target='_blank'
+              href={"https://www.instagram.com/jfb_foods?igsh=eHFoaTV1aGM3NDVz"}
+              className='footer-icon'
+            >
               <InstagramIcon />
             </Link>
-            <Link target='_blank' href={"/"} className='footer-icon'>
+            <Link
+              target='_blank'
+              href={`tel:+233505926486`}
+              className='footer-icon'
+            >
               <PhoneIcon />
             </Link>
           </div>

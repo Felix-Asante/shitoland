@@ -1,5 +1,7 @@
 import Container from "@/components/layouts/Container";
+import { WHATSAPP_URL } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function SecondaryHeroSection() {
@@ -20,9 +22,13 @@ export default function SecondaryHeroSection() {
 
             <div className='flex flex-col md:flex-row items-center gap-5'>
               <p className='font-semibold'>Starting from GH₵ 8</p>
-              <button className='p-2 px-8 shadow-md rounded-full hover:bg-primary-300 bg-primary text-white font-semibold'>
+              <Link
+                href={WHATSAPP_URL}
+                target='_blank'
+                className='p-2 px-8 shadow-md rounded-full hover:bg-primary-300 bg-primary text-white font-semibold'
+              >
                 Order now
-              </button>
+              </Link>
             </div>
           </aside>
           <div className='w-[80%] h-[300px] md:flex-1 relative'>

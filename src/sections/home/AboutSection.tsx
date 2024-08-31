@@ -1,5 +1,7 @@
 import Container from "@/components/layouts/Container";
+import { WHATSAPP_URL } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function AboutSection() {
@@ -15,9 +17,13 @@ export default function AboutSection() {
               the finest ingredients, delivering a unique blend of heat and
               flavor that will elevate any dish.
             </p>
-            <button className='mt-6 p-2.5 px-8 rounded-full bg-primary hover:bg-primary-300 text-white font-semibold'>
+            <Link
+              href={WHATSAPP_URL}
+              target='_blank'
+              className='inline-block mt-6 p-2.5 px-8 rounded-full bg-primary hover:bg-primary-300 text-white font-semibold'
+            >
               Order now
-            </button>
+            </Link>
           </div>
           <div className='sm:w-[40%] h-fit bg-primary/10 rounded-2xl p-2'>
             <Image

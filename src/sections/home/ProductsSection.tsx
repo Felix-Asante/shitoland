@@ -1,8 +1,10 @@
 import Container from "@/components/layouts/Container";
+import { WHATSAPP_URL } from "@/constants";
 import { PRODUCTS } from "@/constants/products";
 import { cn } from "@/utils";
 import { WeightIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function ProductsSection() {
@@ -60,9 +62,13 @@ export default function ProductsSection() {
                 <span className='text-gray-500 text-sm'>{product.size}</span>
               </div>
             </div>
-            <button className='w-full rounded-full hover:bg-primary hover:text-white py-1.5 px-3 border border-primary-300'>
+            <Link
+              href={WHATSAPP_URL}
+              target='_blank'
+              className='inline-block text-center w-full rounded-full hover:bg-primary hover:text-white py-1.5 px-3 border border-primary-300'
+            >
               Order now
-            </button>
+            </Link>
           </div>
         ))}
       </div>
